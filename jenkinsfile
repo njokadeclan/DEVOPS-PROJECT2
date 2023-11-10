@@ -1,0 +1,14 @@
+pipeline{
+
+    agent any
+
+    stages{
+
+        stage('Continuos Download') {
+
+            steps{
+                git branch: 'main', url: 'https://github.com/njokadeclan/DEVOPS-PROJECT2.git'
+            }
+        }
+    }
+}
