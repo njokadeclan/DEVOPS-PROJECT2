@@ -8,9 +8,9 @@ pipeline{
 
             steps{
                 git branch: 'main', url: 'https://github.com/njokadeclan/DEVOPS-PROJECT2.git'
-
-
-        stage('Unit Testing'){
+            }
+        }
+        stage('Unit Test'){
 
             steps{
                 sh'mvn test'
