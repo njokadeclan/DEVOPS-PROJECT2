@@ -7,7 +7,7 @@ pipeline{
         stage('Continuos Download') {
 
             steps{
-                git branch: 'main', url 'https://github.com/njokadeclan/DEVOPS-PROJECT2.git'
+                git branch: 'main', url: 'https://github.com/njokadeclan/DEVOPS-PROJECT2.git'
             }
         }
         stage("Unit Test"){
