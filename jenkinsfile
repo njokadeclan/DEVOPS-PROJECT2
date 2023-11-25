@@ -72,16 +72,11 @@ pipeline{
          steps{
 
             script{
-                withCredentials([string(credentialsId: 'docker_auth', variable: 'Docker_cred')]){
-                    sh 'docker login -u njokadeclan -p ${Docker_cred}'
+                withCredentials([string(credentialsId: 'docker_authen', variable: 'Docker_cred')]){
+                    sh 'docker login -u njokadeclan -p ${ocker_cred}'
                     sh 'docker tag myuber:latest njokadeclan/my-project1:my-first-project-image'
                     sh 'docker push njokadeclan/my-project1:my-first-project-image'
                 }
             }
          }
-             }
-                }
-             }  
         }
-    }
-}
